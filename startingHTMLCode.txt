@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <style>
+            table, th, td {
+                            border: 1px solid black;
+                            border-collapse: collapse;
+                            padding: 15px;
+                            }
+        </style>
+    </head>
+    <body>
+    <h1 align=center> Faculty Filter Software</h1>
+        <form action="{{ url_for('gfg')}}" method="POST"><div class="filterDiv">
+            <table><tr>
