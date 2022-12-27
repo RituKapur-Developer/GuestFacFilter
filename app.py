@@ -103,6 +103,7 @@ def gfg():
         result_html_code = result_html_code + '</table></html>'
         show_result(result_html_code)
         cursor.close()
+        print("all tasks completed")
         return render_template("table.html", tables=[result_html_code], titles=[''])
     return render_template("guestFacultyfilter.html")
 
