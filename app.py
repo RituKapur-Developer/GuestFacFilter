@@ -40,10 +40,6 @@ def gfg():
         skills_exp = request.form.get("Experience_in_Skill")
         print(skills_exp[0])
         cursor = mysql.connection.cursor()
-        #fetch_skill_range_query = "select * from skillExp"
-        #cursor.execute(fetch_skill_range_query)
-        #skill_range_data = cursor.fetchall()
-        #print(skill_range_data)
         # get constraints
         query = commons.get_applicant_ids_query_as_per_skill(skills)
         print(query)
@@ -60,10 +56,8 @@ def gfg():
         for row in result:
             exp_applicant_ids.append(row[0])
         common_applicant_ids = set(applicant_ids).intersection(set(exp_applicant_ids))
-        #print(common_applicant_ids)
         query1 = commons.get_filter_query(post_name, age, preferences, min_degree, max_degree, specialisation,
                                          percentage, designation,  total_experience) #responsibilities,
-        #print(query1)
         cursor.execute(query1)
         result = cursor.fetchall()
         selected_applicant_ids = []
