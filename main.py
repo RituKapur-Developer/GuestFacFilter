@@ -51,6 +51,7 @@ if __name__ == '__main__':
     conn = dao.est_connection()
     html_code = fetch_and_display_existing_data(conn)
     commons.write_code_to_file(constants.HTML_FILE, html_code)
+    print("writing task completed")
     conn.close()
     #dao.create_one_time_tables() #run this first then flask and run once
     #dao.insert_once_skill_exp_range()
